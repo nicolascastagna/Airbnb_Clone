@@ -1,11 +1,14 @@
 import Head from "next/head";
 import Banner from "../components/Banner";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 import LargeCard from "../components/LargeCard";
 import MediumCard from "../components/MediumCard";
 import SmallCard from "../components/SmallCard";
+import { useHorizontalScroll } from "../utils/useSideScroll";
 
 export default function Home({ exploreData, cardsData }) {
+  const scrollRef = useHorizontalScroll();
   return (
     <div className="">
       <Head>
@@ -36,7 +39,10 @@ export default function Home({ exploreData, cardsData }) {
             Vivez où vous souhaitez
           </h2>
           <h2>
-            <div className="flex space-x-3 overflow-scroll scrollbar-hide p-3 -ml-3">
+            <div
+              className="flex space-x-3 overflow-scroll scrollbar-hide p-3 -ml-3"
+              ref={scrollRef}
+            >
               {cardsData?.map(({ img, title }) => (
                 <MediumCard key={img} img={img} title={title} />
               ))}
@@ -52,6 +58,9 @@ export default function Home({ exploreData, cardsData }) {
           />
         </section>
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }

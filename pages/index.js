@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Banner from "../components/Banner";
 import Header from "../components/Header";
+import LargeCard from "../components/LargeCard";
 import MediumCard from "../components/MediumCard";
 import SmallCard from "../components/SmallCard";
 
@@ -41,6 +42,14 @@ export default function Home({ exploreData, cardsData }) {
               ))}
             </div>
           </h2>
+        </section>
+        <section>
+          <LargeCard
+            img="../images/largecard.webp"
+            title="Les Plus Grands Extérieurs"
+            description="Listes de souhaits organisées par Airbnb."
+            buttonText="Être inspiré"
+          />
         </section>
       </main>
     </div>

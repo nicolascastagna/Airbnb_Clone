@@ -20,9 +20,7 @@ export default function Home({ exploreData, cardsData }) {
       <Banner />
       <main className="max-w-7xl mx-auto px-8 sm:px-16">
         <section className="pt-6">
-          <h2 className="text-4xl font-semibold pb-5">
-            Explorer aux alentours
-          </h2>
+          <h2 className="text-4xl font-semibold pb-5">Explore Nearby</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {exploreData?.map(({ img, distance, location }) => (
               <SmallCard
@@ -35,9 +33,7 @@ export default function Home({ exploreData, cardsData }) {
           </div>
         </section>
         <section>
-          <h2 className="text-4xl font-semibold py-8">
-            Vivez où vous souhaitez
-          </h2>
+          <h2 className="text-4xl font-semibold py-8">Live Anywhere</h2>
           <h2>
             <div
               className="flex space-x-3 overflow-scroll scrollbar-hide p-3 -ml-3"
@@ -52,9 +48,9 @@ export default function Home({ exploreData, cardsData }) {
         <section>
           <LargeCard
             img="../images/largecard.webp"
-            title="Les Plus Grands Extérieurs"
-            description="Listes de souhaits organisées par Airbnb."
-            buttonText="Être inspiré"
+            title="The Greatest Outdoors"
+            description="Wishlists curated by Airbnb."
+            buttonText="Get inspired"
           />
         </section>
       </main>

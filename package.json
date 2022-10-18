@@ -7,7 +7,6 @@
   },
   "dependencies": {
     "@heroicons/react": "^1.0.6",
-    "date-fns": "^2.29.3",
     "date-range": "^0.0.2",
     "next": "latest",
     "react": "^18.2.0",

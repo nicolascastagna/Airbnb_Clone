@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import { dateParser } from "../components/Utils";
 
 function Search() {
   const router = useRouter();
@@ -8,11 +9,20 @@ function Search() {
 
   return (
     <div className="h-screen">
-      <Header />
+      <Header
+        placeholder={`${location} | ${dateParser(startDate)} | ${dateParser(
+          endDate
+        )} | ${numberGuests} guests`}
+      />
       <main className="flex">
         <section>
-          <p className="text-xs">300+ Stays for 5 numbers of guests</p>
-          <h1 className="text-3xl font-semibold mt-2 mb-6">Stay in Mars</h1>
+          <p className="text-xs">
+            300+ Stays - {dateParser(startDate)} - {dateParser(endDate)} -{" "}
+            {numberGuests} guests
+          </p>
+          <h1 className="text-3xl font-semibold mt-2 mb-6">
+            Stay in {location}
+          </h1>
           <div className="hidden lg:inline-flex mb-5 space-x-3 text-gray-800 whitespace-nowrap">
             <p className="button">Cancellation Flexibility</p>
             <p className="button">Type of place</p>
